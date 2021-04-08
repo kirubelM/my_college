@@ -4,6 +4,7 @@ import Todo from './Todo'
 import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
+import Menu from './Menu'
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -27,9 +28,11 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>My Task</h1>
+      <Menu></Menu>
+      <br></br>
       <form>
         <FormControl>
+         
           <InputLabel> ✅ Write a Todo</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
