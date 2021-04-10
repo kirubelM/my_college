@@ -4,9 +4,12 @@ import Todo from './Todo'
 import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
+<<<<<<< HEAD
 import Menu from './Menu'
 import Login from './components/Login';
 import Logout from './components/Logout';
+=======
+>>>>>>> parent of 862cca3 (Added a Nav Bar)
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -31,13 +34,16 @@ function App() {
   return (
     
     <div className="App">
+<<<<<<< HEAD
       <Login/>
       <Logout/>
       <Menu></Menu>
       <br></br>
+=======
+      <h1>My Task</h1>
+>>>>>>> parent of 862cca3 (Added a Nav Bar)
       <form>
         <FormControl>
-         
           <InputLabel> ✅ Write a Todo</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
