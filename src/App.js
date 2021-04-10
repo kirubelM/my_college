@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import { Button, InputLabel, FormControl, Input } from '@material-ui/core';
 import Todo from './Todo'
 import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
 import Menu from './Menu'
+import Login from './Login';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -27,6 +28,7 @@ function App() {
     setInput('');//Clear input after adding the todo.
   }
   return (
+    
     <div className="App">
       <Menu></Menu>
       <br></br>
