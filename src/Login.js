@@ -14,9 +14,7 @@ export class Login extends Component {
                 <GoogleLogin
                     clientId="794363678933-d8p55ogfbttjo9h9i1acssd4f2ssl4ko.apps.googleusercontent.com"
                     buttonText="Login"
-                    onSuccess={<React.StrictMode>
-                        <App/>
-                      </React.StrictMode>}
+                    onSuccess={<App/>}
                     onFailure={this.responseGoogle}
                     cookiePolicy={'single_host_origin'}
             />                
