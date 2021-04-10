@@ -5,7 +5,8 @@ import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
 import Menu from './Menu'
-import Login from './Login';
+import Login from './components/Login';
+import Logout from './components/Logout';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -30,6 +31,8 @@ function App() {
   return (
     
     <div className="App">
+      <Login/>
+      <Logout/>
       <Menu></Menu>
       <br></br>
       <form>
