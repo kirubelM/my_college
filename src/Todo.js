@@ -36,6 +36,7 @@ function Todo(props) {
         setOpen(false);
     }
     return (
+        <div className="Todo_content">
         <>
         <Modal
             open = {open}
@@ -47,7 +48,7 @@ function Todo(props) {
                 <Button onClick={updateTodo}>Update todo</Button>
             </div>
         </Modal>
-        <List className="todo__list">
+        <List className="">
             <ListItem>
                 <ListItemAvatar>
                 </ListItemAvatar>
@@ -57,6 +58,7 @@ function Todo(props) {
             <DeleteIcon onClick={event => db.collection('todos').doc(props.todo.id).delete()}>Delete⛔</DeleteIcon>
         </List>
         </>
+        </div>
     )
 }
 

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, Component } from 'react';
-import { Button, InputLabel, FormControl, Input } from '@material-ui/core';
+import { Button, InputLabel, FormControl, Input, Menu } from '@material-ui/core';
 import Todo from './Todo'
 import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
+import NavBar from "./NavBar";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -28,7 +29,9 @@ function App() {
   return (
     
     <div className="App">
-      <h1>My Task</h1>
+            <NavBar></NavBar>
+
+      <h2>My Tasks</h2>
 
       <form>
         <FormControl>
