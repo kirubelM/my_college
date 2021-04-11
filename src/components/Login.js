@@ -14,12 +14,8 @@ function Login() {
     alert(
       `Logged in successfully welcome ${res.profileObj.name} 👋. `
     );
+    <App/>
 
-<Switch>
-  <Redirect from="./components/Login" to="/App" />
-  <Route path="/new-path">
-  </Route>
-</Switch>
     refreshTokenSetup(res);
 
   };

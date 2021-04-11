@@ -5,10 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/Login'
 import Logout from './components/Logout'
+import NavBar from './NavBar'
 ReactDOM.render(
   <React.StrictMode>
     <div className="App">
-      <h2>The Components way</h2>
+    <NavBar></NavBar>
+      <br></br>
       <Login />
       <br />
       <Logout />
