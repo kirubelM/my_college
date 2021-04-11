@@ -3,6 +3,7 @@ import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../utils/refreshToken';
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 const clientId =
   '794363678933-27lpqhp3rr8mui0nqllau2kfncuf8bdk.apps.googleusercontent.com';
@@ -13,9 +14,13 @@ function Login() {
     alert(
       `Logged in successfully welcome ${res.profileObj.name} 👋. `
     );
-    <App/>
+
+<Switch>
+  <Redirect from="./components/Login" to="/App" />
+  <Route path="/new-path">
+  </Route>
+</Switch>
     refreshTokenSetup(res);
-    <App/>
 
   };
 

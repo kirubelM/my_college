@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/Login'
-
+import Logout from './components/Logout'
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <div className="App">
+      <h2>The Components way</h2>
+      <Login />
+      <br />
+      <Logout />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
