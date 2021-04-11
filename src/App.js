@@ -29,7 +29,7 @@ function App() {
   return (
     
     <div className="App">
-            <NavBar></NavBar>
+              <NavBar></NavBar>
 
       <h2>My Tasks</h2>
 

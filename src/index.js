@@ -6,15 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import Login from './components/Login'
 import Logout from './components/Logout'
 import NavBar from './NavBar'
+
 ReactDOM.render(
   <React.StrictMode>
-    <div className="App">
-    <NavBar></NavBar>
+    <App/>
+    {/* <div className="App">
       <br></br>
       <Login />
       <br />
       <Logout />
-    </div>
+    </div> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

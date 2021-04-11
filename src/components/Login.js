@@ -14,9 +14,9 @@ function Login() {
     alert(
       `Logged in successfully welcome ${res.profileObj.name} 👋. `
     );
-    <App/>
 
     refreshTokenSetup(res);
+    <App/>
 
   };
 
@@ -31,7 +31,7 @@ function Login() {
     <div>
       <GoogleLogin
         clientId={clientId}
-        buttonText="Login"
+        buttonText=" Login "
         onSuccess={onSuccess}
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
