@@ -37,15 +37,12 @@ function App() {
   return (
 
     <div className="App">
-      <NavBar></NavBar>
-      <h2>My Tasks</h2>
-     
-
-
+      <NavBar name="My College App"></NavBar>
+      {/* <h2>My Tasks</h2> */}     
       <form>
         <FormControl>
           {/* <button onClick={}> </button> */}
-          <InputLabel> ✅ Write a Todo</InputLabel>
+          <InputLabel> ✅ Write a Task</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
         <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={addTodo}>

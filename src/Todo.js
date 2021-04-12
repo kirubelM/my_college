@@ -43,9 +43,9 @@ function Todo(props) {
             onClose = {e => setOpen(false)}
         >
             <div className={classes.paper}>
-                <h1>I am a Modal</h1>
+                <h1>Task Update</h1>
                 <input placeholder={props.todo.todo} value={input} onChange={event => setInput(event.target.value)}/>
-                <Button onClick={updateTodo}>Update todo</Button>
+                <Button onClick={updateTodo}>Update task</Button>
             </div>
         </Modal>
         <List className="">

@@ -26,9 +26,9 @@ export default function ButtonAppBar() {
     <div className={classes.root , "dafas" }>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography variant="h5" className={classes.title}>
             My College App
           </Typography>
