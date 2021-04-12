@@ -38,7 +38,7 @@ function App() {
 
     <div className="App">
       <NavBar name="My College App"></NavBar>
-      {/* <h2>My Tasks</h2> */}     
+      <h2></h2>
       <form>
         <FormControl>
           {/* <button onClick={}> </button> */}
