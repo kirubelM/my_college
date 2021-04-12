@@ -34,14 +34,17 @@ function App() {
 
     setInput('');//Clear input after adding the todo.
   }
+  return (
 
-  const Home = () => {
     <div className="App">
       <NavBar></NavBar>
       <h2>My Tasks</h2>
+     
+
 
       <form>
         <FormControl>
+          {/* <button onClick={}> </button> */}
           <InputLabel> ✅ Write a Todo</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
@@ -54,43 +57,8 @@ function App() {
           <Todo todo={todo}/>
         ))}
       </ul>
-    </div>
-
-  }
-
-
-  return (
-
-    <div className="App">
-    <NavBar></NavBar>
-    <h2>My Tasks</h2>
-
-    <form>
-      <FormControl>
-        <button onClick={}> </button>
-        <InputLabel> ✅ Write a Todo</InputLabel>
-        <Input value={input} onChange={event => setInput(event.target.value)}/>
-      </FormControl>
-      <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={addTodo}>
-        Add Todo
-      </Button>
-    </form>
-    <ul>  
-      {todos.map(todo => (
-        <Todo todo={todo}/>
-      ))}
-    </ul>
-    
-    <Router>
-
-    
-    <Switch>
-      <Route path="/"  exact component={Home} />
-      <Route path="/login" component={Login} />
-
-
-    </Switch>
-    </Router>
+      
+      
   </div>
 
 
@@ -98,3 +66,29 @@ function App() {
 }
 
 export default App;
+
+  // const Home = () => {
+  //   <div className="App">
+  //     <NavBar></NavBar>
+  //     <h2>My Tasks</h2>
+
+  //     <form>
+  //       <FormControl>
+  //         <InputLabel> ✅ Write a Todo</InputLabel>
+  //         <Input value={input} onChange={event => setInput(event.target.value)}/>
+  //       </FormControl>
+  //       <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={addTodo}>
+  //         Add Todo
+  //       </Button>
+  //     </form>
+  //     <ul>  
+  //       {todos.map(todo => (
+  //         <Todo todo={todo}/>
+  //       ))}
+  //     </ul>
+  //   </div>
+
+  // }
+
+
+  
