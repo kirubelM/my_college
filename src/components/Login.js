@@ -3,12 +3,16 @@ import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../utils/refreshToken';
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect, useHistory } from 'react-router-dom'
+
 
 const clientId =
   '794363678933-27lpqhp3rr8mui0nqllau2kfncuf8bdk.apps.googleusercontent.com';
 
+
 function Login() {
+  const history = useHistory();
+
   const onSuccess = (res) => {
     console.log('Login Success: currentUser:', res.profileObj);
     alert(
@@ -16,8 +20,7 @@ function Login() {
     );
 
     refreshTokenSetup(res);
-    <App/>
-
+    history.push('/')
   };
 
   const onFailure = (res) => {
@@ -27,8 +30,10 @@ function Login() {
     );
   };
 
+
   return (
     <div>
+      <button onClick={() => history.push('/') } >Go to home</button>
       <GoogleLogin
         clientId={clientId}
         buttonText=" Login "

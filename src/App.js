@@ -5,6 +5,14 @@ import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
 import NavBar from "./NavBar";
+import Login from "./components/Login";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -26,11 +34,10 @@ function App() {
 
     setInput('');//Clear input after adding the todo.
   }
-  return (
-    
-    <div className="App">
-              <NavBar></NavBar>
 
+  const Home = () => {
+    <div className="App">
+      <NavBar></NavBar>
       <h2>My Tasks</h2>
 
       <form>
@@ -48,6 +55,45 @@ function App() {
         ))}
       </ul>
     </div>
+
+  }
+
+
+  return (
+
+    <div className="App">
+    <NavBar></NavBar>
+    <h2>My Tasks</h2>
+
+    <form>
+      <FormControl>
+        <button onClick={}> </button>
+        <InputLabel> ✅ Write a Todo</InputLabel>
+        <Input value={input} onChange={event => setInput(event.target.value)}/>
+      </FormControl>
+      <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={addTodo}>
+        Add Todo
+      </Button>
+    </form>
+    <ul>  
+      {todos.map(todo => (
+        <Todo todo={todo}/>
+      ))}
+    </ul>
+    
+    <Router>
+
+    
+    <Switch>
+      <Route path="/"  exact component={Home} />
+      <Route path="/login" component={Login} />
+
+
+    </Switch>
+    </Router>
+  </div>
+
+
   );
 }
 
