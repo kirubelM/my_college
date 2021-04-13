@@ -34,7 +34,6 @@ export default function ButtonAppBar() {
               Collegify
           </Typography>
           <Button color="inherit"><ExitToAppIcon>Logout</ExitToAppIcon></Button>
-         
         </Toolbar>
       </AppBar>
     </div>
