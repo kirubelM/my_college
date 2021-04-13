@@ -2,8 +2,7 @@ import React from 'react';
 import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 // refresh token
-import Logout from '../components/Logout'
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -21,7 +20,7 @@ const clientId =
   '794363678933-27lpqhp3rr8mui0nqllau2kfncuf8bdk.apps.googleusercontent.com';
 
 
-function Login() {
+function Login(props) {
   const history = useHistory();
 
   const onSuccess = (res) => {
@@ -29,17 +28,20 @@ function Login() {
     alert(
       `Logged in successfully welcome ${res.profileObj.name} 👋. `
     );
-    refreshTokenSetup(res);  
-      history.push('/');         
+    refreshTokenSetup(res);
+  
+    props.history.push("/adddata");
+
   };
 
-
-  const onFailure = (res) => { 
+  const onFailure = (res) => {
     console.log('Login failed: res:', res);
     alert(
       `Failed to login. Try Again!😢`
     );
   };
+
+
   return (
     <div >
        <AppBar position="static">
@@ -50,11 +52,11 @@ function Login() {
           <Typography variant="h5" >
             My College App
           </Typography>
-          <Button onClick={Logout} color="inherit">Log out</Button>
         </Toolbar>
       </AppBar>
-      
+      <button onClick={() => history.push('/App') } >Go to home</button>
       <GoogleLogin
+         className="login"
         clientId={clientId}
         buttonText=" Login "
         onSuccess={onSuccess}
@@ -63,14 +65,8 @@ function Login() {
         style={{ marginTop: '100px' }}
         isSignedIn={true}
       />
-      <br></br>
-      <br></br>
-
-      <button onClick={() => history.push({App}) } >Go to home</button>
     </div>
   );
 }
 
 export default Login;
-
-

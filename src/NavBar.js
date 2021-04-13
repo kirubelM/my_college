@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import './Todo.css';
+import { GoogleLogout } from 'react-google-login';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -20,8 +20,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
+  
   const classes = useStyles();
+  const onSuccess = (res) => {
+    
+    console.log('Logout made successfully');
+    alert('Logout made successfully ✌');
+    props.history.push("/")
+  };
+  const clientId =
+  '794363678933-27lpqhp3rr8mui0nqllau2kfncuf8bdk.apps.googleusercontent.com';
 
   return (
     <div className={classes.root , "dafas" }>
@@ -33,7 +42,12 @@ export default function ButtonAppBar() {
           <Typography variant="h5" className={classes.title}>
               Collegify
           </Typography>
-          <Button color="inherit"><ExitToAppIcon>Logout</ExitToAppIcon></Button>
+          <GoogleLogout
+        clientId={clientId}
+        buttonText="Logout"
+        onLogoutSuccess={onSuccess}
+      ></GoogleLogout>
+          <Button color="inherit"><ExitToAppIcon >Logout</ExitToAppIcon></Button>
         </Toolbar>
       </AppBar>
     </div>

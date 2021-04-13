@@ -3,9 +3,6 @@ import { Button, InputLabel, FormControl, Input, Menu } from '@material-ui/core'
 import Todo from './Todo'
 import './App.css';
 import db from './firebase';
-import firebase from 'firebase';
-import NavBar from "./NavBar";
-import Login from "./components/Login";
 
 import {
   BrowserRouter as Router,
@@ -13,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import RouteConfig from './Router';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -24,36 +22,22 @@ function App() {
     })
   }, []);
 
-  const addTodo = (event) => {  //Fires when button is clicked.
-    event.preventDefault();//Stops Refresh.
+  // const addTodo = (event) => {  //Fires when button is clicked.
+  //   event.preventDefault();//Stops Refresh.
 
-    db.collection('todos').add({
-      todo: input,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    })
-
-    setInput('');//Clear input after adding the todo.
-  }
+  //   db.collection('todos').add({
+  //     todo: input,
+  //     timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  //   })
+  
+  //   setInput('');//Clear input after adding the todo.
+  // }
   return (
 
     <div className="App">
-      <NavBar></NavBar>
-      <h2></h2>
-      <form>
-        <FormControl>
-          {/* <button onClick={}> </button> */}
-          <InputLabel> ✅ Write a Task</InputLabel>
-          <Input value={input} onChange={event => setInput(event.target.value)}/>
-        </FormControl>
-        <Button disabled={!input} variant="contained" color="primary" type="submit" onClick={addTodo}>
-          Add Todo
-        </Button>
-      </form>
-      <ul>  
-        {todos.map(todo => (
-          <Todo todo={todo}/>
-        ))}
-      </ul>
+     
+      <RouteConfig/>
+     
       
       
   </div>

@@ -8,26 +8,24 @@
 
 .Todo_content {
     animation-play-state: center;
+    display: flex;
+    justify-content: center;
 }
-
-.edIcon {
-    float:inline-start;
-    align-items: center;
-    color:#20b9ef;
-
-}
-
-.itIcon {
-    align-items: center;
-
-}
-
-.delIcon {
+.fortable{
+    width: 60%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.name {
-    color: #20b9ef;
-}
-.dafas {
+.edit{
+    padding:4px;
+    margin-right: 5px;
+    background: rgb(97, 180, 97);
+    color: rgb(240, 245, 242);
+    width: 50px;
+    height: 30px;
+    font-size: medium;
+    border: solid;
+    border-width: 2px;
+    border-radius: 10px;
 }

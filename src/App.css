@@ -1,7 +1,30 @@
 .App {
-  text-align: center;
-}
+  background: linear-gradient(
+    #007991,
 
+#78ffd6);
+
+  text-align: center;
+  height: 100vh;
+}
+.label{
+  color:white;
+}
+.Adddepart2{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.tbody{
+  margin-right: 10px;
+}
+.adddata{
+  margin-top: 20px;
+  color: white;
+}
+.login{
+  margin-top: 20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

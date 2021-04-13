@@ -6,16 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import Login from './components/Login'
 import Logout from './components/Logout'
 import NavBar from './NavBar'
-// import { Button } from '@material-ui/core';
+
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App/> */}
-    <div className="App">
-      {/* <Login />
+    <App/>
+    {/* <div className="App">
+      <br></br>
+      <Login />
       <br />
-      <Logout /> */}
-      <App/>
-    </div>
+      <Logout />
+    </div> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
