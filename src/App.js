@@ -37,7 +37,7 @@ function App() {
   return (
 
     <div className="App">
-      <NavBar name="My College App"></NavBar>
+      <NavBar></NavBar>
       <h2></h2>
       <form>
         <FormControl>

@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +31,10 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton> */}
           <Typography variant="h5" className={classes.title}>
-            My College App
+              Collegify
           </Typography>
-          <Button color="inherit">Log out</Button>
+          <Button color="inherit"><ExitToAppIcon>Logout</ExitToAppIcon></Button>
+         
         </Toolbar>
       </AppBar>
     </div>
