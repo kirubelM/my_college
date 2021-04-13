@@ -48,15 +48,15 @@ function Todo(props) {
                 <Button onClick={updateTodo}>Update task</Button>
             </div>
         </Modal>
-        <List className="">
+        {/* <List className=""> */}
             <ListItem>
                 <ListItemAvatar>
                 </ListItemAvatar>
                 <ListItemText primary={props.todo.todo} /*secondary="Dummy Deadline⏰" *//>
             </ListItem>
-            <button onClick={e => setOpen(true)}>Edit</button>
-            <DeleteIcon onClick={event => db.collection('todos').doc(props.todo.id).delete()}>Delete⛔</DeleteIcon>
-        </List>
+            <button className="edIcon" onClick={e => setOpen(true)}>Edit</button>
+            <DeleteIcon className="delIcon" onClick={event => db.collection('todos').doc(props.todo.id).delete()}>Delete⛔</DeleteIcon>
+        {/* </List> */}
         </>
         </div>
     )

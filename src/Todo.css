@@ -9,3 +9,25 @@
 .Todo_content {
     animation-play-state: center;
 }
+
+.edIcon {
+    float:inline-start;
+    align-items: center;
+    color:#20b9ef;
+
+}
+
+.itIcon {
+    align-items: center;
+
+}
+
+.delIcon {
+    align-items: center;
+}
+
+.name {
+    color: #20b9ef;
+}
+.dafas {
+}

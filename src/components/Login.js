@@ -3,7 +3,7 @@ import App from '../App'
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import Logout from '../components/Logout'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -29,20 +29,17 @@ function Login() {
     alert(
       `Logged in successfully welcome ${res.profileObj.name} 👋. `
     );
-    refreshTokenSetup(res);
-  
-        history.push('/')
-
+    refreshTokenSetup(res);  
+      history.push('/');         
   };
 
-  const onFailure = (res) => {
+
+  const onFailure = (res) => { 
     console.log('Login failed: res:', res);
     alert(
       `Failed to login. Try Again!😢`
     );
   };
-
-
   return (
     <div >
        <AppBar position="static">
@@ -56,7 +53,7 @@ function Login() {
           <Button onClick={Logout} color="inherit">Log out</Button>
         </Toolbar>
       </AppBar>
-      <button onClick={() => history.push('/App') } >Go to home</button>
+      
       <GoogleLogin
         clientId={clientId}
         buttonText=" Login "
@@ -66,8 +63,14 @@ function Login() {
         style={{ marginTop: '100px' }}
         isSignedIn={true}
       />
+      <br></br>
+      <br></br>
+
+      <button onClick={() => history.push({App}) } >Go to home</button>
     </div>
   );
 }
 
 export default Login;
+
+
