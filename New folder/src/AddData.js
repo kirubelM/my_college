@@ -11,8 +11,6 @@ import { GoogleLogout } from 'react-google-login';
 import './App.css';
 import db from './firebase';
 import firebase from 'firebase';
-import About from './About';
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -62,7 +60,6 @@ function AddData(props) {
     setInput('');//Clear input after adding the todo.
   }
 
-
   return (
 
     <div className="App">
@@ -80,8 +77,7 @@ function AddData(props) {
             buttonText="Logout"
             onLogoutSuccess={onSuccess}
           ></GoogleLogout>
-                     {/* <About/> */}
-
+         
         </Toolbar>
       </AppBar>
     </div>

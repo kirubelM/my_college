@@ -29,15 +29,3 @@
     border-width: 2px;
     border-radius: 10px;
 }
-
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modalButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

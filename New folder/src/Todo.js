@@ -52,7 +52,7 @@ function Todo(props) {
     return (
         <div className="Todo_content">
        
-        <Modal className="modal"
+        <Modal
             open = {open}
             onClose = {e => setOpen(false)}
         >

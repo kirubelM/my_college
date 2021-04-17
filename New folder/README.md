@@ -1,24 +1,3 @@
-About The Project
-
-There are more than 4000 colleges in the US alone, college search
-for students is a very tiring, confusing and time consuming process
-on domestic students let alone international students from Ethiopia.
-This app is intended to simplify the college application process by
-guiding and walking students through materials they need for a US
-college and keep track of what they are missing. This app could will be
-scaled to all international students. This app will also include colleges 
-from around the globe depending on the demand for the app and the impact it makhases.
-
-Built With
-● React
-● Visual studio code
-● Html
-● CSS
-● Firebase
-● Google Cloud
-
-Getting Started
-T----------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -89,35 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-Contributing
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
-
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-License
-
-Contact
-Kirubel Mognehode - https://www.linkedin.com/in/kirubel-m - zewdukirubel7@gmail.com
-
-Project Link: https://github.com/kirubelM/my_college
-
-Acknowledgements
-
-Material UI
-Firebase Cli Docs: https://firebase.google.com/docs/hosting/full-config?utm_campaign=Firebase_featureoverview_education_hosting_en_08-30-16&utm_source=Firebase&utm_medium=yt-desc
-Google Cloud
-Dr. Forrest Stonedahl: http://forrest.stonedahl.com/
-LoveLace Augustana
-Stackoverflow: https://stackoverflow.com/questions/5834014/lf-will-be-replaced-by-crlf-in-git-what-is-that-and-is-it-important
-Log Rocket: https://blog.logrocket.com/setting-up-continuous-deployment-with-react-firebase-and-github-actions/
-Font Awesome: https://fontawesome.com/
-
-
-
-
-
